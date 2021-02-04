@@ -16,6 +16,10 @@ int main(void)
 		{
 			for (k = i; k < 10; k++)
 			{
+				if (i == k)
+					l = j + 1;
+				else
+					l = '0';
 				for (l = l; l < 10; l++)
 				{
 					putchar(i + '0');

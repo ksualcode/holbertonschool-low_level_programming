@@ -8,14 +8,14 @@
 
 int main(void)
 {
-        int i, j, k, l;
+	int i, j, k, l;
 
-        for (i = 0; i < 8; i++)
-        {
-                for (j = 0; j < 9; j++)
-                {
-                        for (k = i; k < 10; k++)
-                        {
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 9; j++)
+		{
+			for (k = i; k < 10; k++)
+			{
 				if (i == k)
 					l = j + 1;
 				else
@@ -31,10 +31,10 @@ int main(void)
 						break;
 					putchar(',');
 					putchar(' ');
-                        	}
+				}
 			}
-                }
-        }
-        putchar('\n');
-        return (0);
+		}
+	}
+	putchar('\n');
+	return (0);
 }

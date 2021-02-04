@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i, j, k, l;
+	int i, j, k, l = 0;
 
 	for (i = 0; i < 10; i++)
 	{
@@ -16,10 +16,6 @@ int main(void)
 		{
 			for (k = i; k < 10; k++)
 			{
-				if (i == k)
-					l = j + 1;
-				else
-					l = 0;
 				for (l = l; l < 10; l++)
 				{
 					putchar(i + '0');

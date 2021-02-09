@@ -1,4 +1,14 @@
-#include "holberton.h"
+#i8c0cb5anclude "holberton.h"
+
+/**
+ * print_spaces - prints the number of spaces
+ * @n: number to evaluate
+ *
+ * Return: Nothing
+ */
+
+void print_spaces(int n)
+
 
 /**
  * print_times_table - prints the last digit
@@ -9,35 +19,36 @@
 
 void print_times_table(int n)
 {
-	int i, j;
+	int i, j, mult;
 	if (n > 0 && n < 15)
 		for (i = 0; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
-				if ((i * j) >= 10 && (i * j) < 100)
+				mult = i * j;
+				if (mult >= 10 && mult < 100)
 				{
-					_putchar(((i * j) / 10) + '0');
-					_putchar(((i * j) % 10) + '0');
+					_putchar((mult / 10) + '0');
+					_putchar((mult % 10) + '0');
 				}
 
-				else if ((i * j) >= 100)
+				else if (mult >= 100)
 				{
-					_putchar(((i * j) / 100) + '0');
-					_putchar(((i * j) / 10 % 10) + '0');
-					_putchar(((i * j) % 10) + '0');
+					_putchar((mult / 100) + '0');
+					_putchar((mult / 10 % 10) + '0');
+					_putchar((mult % 10) + '0');
 				}
 
 				else
-					_putchar((i * j) + '0');
+					_putchar(mult + '0');
 
 				if (j == n)
 					continue;
 				_putchar(',');
 
-				if (j != 0 && (i * j) >= 100)
+				if (j != 0 && mult >= 100)
 					_putchar(' ');
-				else if (j != 0 && (i * j) >= 10 && (i * j) < 100)
+				else if (j != 0 && mult >= 10 && mult < 100)
 				{
 					_putchar(' ');
 					_putchar(' ');

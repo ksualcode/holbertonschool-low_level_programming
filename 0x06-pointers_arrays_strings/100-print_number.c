@@ -9,18 +9,18 @@
 
 void print_number(int n)
 {
-	/* unsigned int m; */
-	int m;
+	unsigned int m;
 
 	if (n < 0)
 	{
-		n = -n;
+		m = -n;
 		_putchar('-');
 	}
+	else
+		m = n;
 	if (n / 10 != 0)
 	{
-		m = n / 10;
-		print_number(m);
+		print_number(m / 10);
 	}
 	_putchar(n % 10 + '0');
 }

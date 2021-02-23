@@ -14,15 +14,18 @@ char *_strstr(char *haystack, char *needle)
 	int i, j;
 	int bool = 0;
 
-	for (i = 0; haystack[i]; i++)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		bool = 0;
-		for (j = 0; needle[j]; j++)
+		for (j = 0; needle[j] != '\0'; j++)
 		{
 			if (haystack[i + j] == needle[j])
+			{
+				/* _putchar('Y'); */
 				bool = 1;
+			}
 			else
 			{
+				/* _putchar('N'); */
 				bool = 0;
 				break;
 			}
@@ -30,6 +33,7 @@ char *_strstr(char *haystack, char *needle)
 		if (bool)
 			return ((haystack + i));
 	}
-	return ('\0');
+	/* _putchar('E'); */
+	return (0);
 
 }

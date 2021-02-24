@@ -8,12 +8,12 @@
  * Return: the root of a numer
  */
 
-int get_prime (int n, int i)
+int get_prime(int n, int i)
 {
 	if (i < n)
 	{
 		if (n % i == 0)
-			return (0); 
+			return (0);
 		else
 			return (get_prime(n, i + 1));
 	}

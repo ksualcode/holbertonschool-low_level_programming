@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - the entry function
@@ -12,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, j, sum;
 
 	if (argc < 2)
 	{
@@ -22,12 +23,14 @@ int main(int argc, char *argv[])
 
 	for (i = 1, sum = 0; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0 && *argv[i] != '0')
+		for (j = 0; argv[i][j]; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isalpha(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
 		sum += atoi(argv[i]);
 	}
 

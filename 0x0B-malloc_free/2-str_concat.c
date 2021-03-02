@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < size1; i++)
 		uwu[i] = s1[i];
 
-	for (i = 0; i < size2; i++)
+	for (i = 0; i < size2 + 1; i++)
 		uwu[size1 + i] = s2[i];
 
 	return (uwu);

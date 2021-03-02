@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	if (uwu == '\0')
 		return ('\0');
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size - 1; i++)
 		uwu[i] = c;
 
 	return (uwu);

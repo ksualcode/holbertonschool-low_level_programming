@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	if (uwu == NULL || size == 0)
 		return (NULL);
 
-	for (i = 0; i < size - 1; i++)
+	for (i = 0; i < size; i++)
 		uwu[i] = c;
 
 	return (uwu);

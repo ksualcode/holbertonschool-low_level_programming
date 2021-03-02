@@ -14,10 +14,10 @@ char *create_array(unsigned int size, char c)
 	char *uwu;
 	unsigned int i;
 
-	if (size <= 0)
+	if (size == 0)
 		return ('\0');
 
-	uwu = malloc(sizeof(char) * size);
+	uwu = (char *)malloc(sizeof(char) * size);
 	if (uwu == '\0')
 		return ('\0');
 

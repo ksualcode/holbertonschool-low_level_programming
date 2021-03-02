@@ -1,5 +1,25 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * string_count - counter
+ * @s: string to count
+ *
+ * Return: number of characters
+ */
+
+int string_count(char *s)
+{
+	int i;
+
+	for (i = 0; s[i]; i++)
+	{
+	}
+
+	return (i);
+}
+
 
 /**
  * str_concat - concatenates two strings.
@@ -14,17 +34,15 @@ char *str_concat(char *s1, char *s2)
 	int size1, size2, i, tlength;
 	char *uwu;
 
-	for (i = 0; s1[i]; i++)
-	{
-	}
-	size1 = i;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	size1 = string_count(s1);
+	size2 = string_count(s2);
 
-	for (i = 0; s2[i]; i++)
-	{
-	}
-	size2 = i;
 	tlength = size1 + size2 + 1;
-	uwu = malloc(sizeof(char) * (tlength));
+	uwu = malloc(sizeof(char) * tlength);
 	if (uwu == NULL)
 		return (NULL);
 
@@ -35,5 +53,4 @@ char *str_concat(char *s1, char *s2)
 		uwu[size1 + i] = s2[i];
 
 	return (uwu);
-
 }

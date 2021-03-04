@@ -21,15 +21,17 @@ int string_count(char *s)
 }
 
 /**
- * malloc_checked - allocates memory using malloc
- * @b: amount of memory to allocate
+ * string_nconcat - concatenates 2 strings
+ * @s1: 1st string to concatenate
+ * @s2: 2nd string to concatenate
+ * @n: number of characters to copy from s2
  *
- * Return: nothing
+ * Return: a pointer to the concatenated string
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int s1max, s2max, i;
+	unsigned int s1max, s2max, i;
 	char *uwu;
 
 	if (s1 == NULL)
@@ -42,12 +44,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= s2max)
 		n = s2max;
 
-	uwu = malloc(sizeof(char) * (s1max + n);
+	uwu = malloc(sizeof(char) * (s1max + n));
 
 	if (!uwu)
 		return (NULL);
 
 	for (i = 0; i < s1max; i++)
-		uwu [i] = s1[i];
-	for (; i <= n; i++)
+		uwu[i] = s1[i];
+	for (i = 0; i < n; i++)
+		uwu[s1max + i] = s2[i];
+	uwu[s1max + i] = '\0';
+
+	return (uwu);
 }

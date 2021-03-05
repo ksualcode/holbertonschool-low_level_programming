@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= s2max)
 		n = s2max;
 
-	uwu = malloc(sizeof(char) * (s1max + n));
+	uwu = malloc(sizeof(char) * (s1max + n + 1));
 
 	if (!uwu)
 		return (NULL);

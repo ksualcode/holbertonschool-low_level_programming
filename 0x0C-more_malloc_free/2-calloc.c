@@ -2,8 +2,9 @@
 #include <stdlib.h>
 
 /**
- * hecked - allocates memory using malloc
- * @b: amount of memory to allocate
+ * _calloc - allocates memory
+ * @nmemb: elements of an array
+ * @size: size of the elements
  *
  * Return: nothing
  */

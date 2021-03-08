@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * dog - doggos > cattos
+ * struct dog - doggos > cattos
  * @name: the dogs name
  * @age: Age of the dog
  * @owner: the legitimate owner of the doggo
@@ -17,8 +17,6 @@ struct dog
 	char *owner;
 };
 
-#endif /* #define DOG_H */
-
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 void print_dog(struct dog *d);
@@ -27,3 +25,4 @@ void print_dog(struct dog *d);
 
 /* void free_dog(dog_t *d); */
 
+#endif /* #define DOG_H */

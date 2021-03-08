@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * free_dog - Frees all the dogos 
+ * free_dog - Frees all the dogos
  * @d: dogo to free
  *
  */

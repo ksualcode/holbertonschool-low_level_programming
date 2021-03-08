@@ -52,7 +52,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!new_doge->owner)
 	{
 		free(new_doge->name);
-		free(new_doge)
+		free(new_doge);
 		return (NULL);
 	}
 

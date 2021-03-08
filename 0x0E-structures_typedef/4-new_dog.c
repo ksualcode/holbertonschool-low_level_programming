@@ -32,33 +32,35 @@ int char_count(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_doge;
-	char *new_name, *new_owner;
+	int i;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
-	new_name = malloc(sizeof(char) * char_count(name) + 1);
-	if (!new_name)
-		return (NULL);
-
-	new_owner = malloc(sizeof(char) * char_count(owner) + 1);
-	if (!new_owner)
-	{
-		free(new_name);
-		return (NULL);
-	}
-
 	new_doge = malloc(sizeof(dog_t));
 	if (!new_doge)
+		return (NULL);
+
+	new_doge->name = malloc(sizeof(char) * char_count(name) + 1);
+	if (!new_doge->name)
 	{
-		free(new_name);
-		free(new_owner);
+		free(new_doge);
 		return (NULL);
 	}
 
-	new_doge->name = new_name;
-	new_doge->age = age;
-	new_doge->owner = new_owner;
+	new_doge->owner = malloc(sizeof(char) * char_count(owner) + 1);
+	if (!new_doge->owner)
+	{
+		free(new_doge->name);
+		free(new_doge)
+		return (NULL);
+	}
+
+	for (i = 0; name[i]; i++)
+		new_doge->name[i] = name[i];
+
+	for (i = 0; owner[i]; i++)
+		new_doge->owner[i] = owner[i];
 
 	return (new_doge);
 }

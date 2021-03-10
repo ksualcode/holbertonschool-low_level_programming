@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (argc > 4 || argc < 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
 	/* assigning valors to s */
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	if ((op[0] == '/' || op[0] == '%') && b == 0)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 
 	/* Makes the calculation and assigns it to result */
@@ -40,10 +40,10 @@ int main(int argc, char *argv[])
 	if (fun == NULL)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 
 	result = fun(a, b);
-	printf ("%d\n", result);
+	printf("%d\n", result);
 	return (0);
 }

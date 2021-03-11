@@ -3,6 +3,14 @@
 
 #include <stdarg.h>
 
+/**
+ * struct type - struct
+ * @type: character to evaluate
+ * @f: function to execute
+ *
+ * Description: struct to determine what function to use
+ */
+
 typedef struct type
 {
 	char *type;

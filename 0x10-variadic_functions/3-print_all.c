@@ -42,7 +42,7 @@ void p_float(va_list arg)
 
 void p_str(va_list arg)
 {
-	char *uwu = va_arg(arg, char*);
+	char *uwu = va_arg(arg, char *);
 
 	if (uwu)
 		printf("%s", uwu);
@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 	int j = 0;
 
 	va_start(list, format);
-	while (format && format[i] != '\0')
+	while (format && format[i])
 	{
 		while (j < 4)
 		{

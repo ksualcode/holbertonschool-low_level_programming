@@ -44,10 +44,9 @@ void p_str(va_list arg)
 {
 	char *uwu = va_arg(arg, char *);
 
-	if (uwu)
-		printf("%s", uwu);
-	else
-		printf("(nil)");
+	if (!uwu)
+		uwu = "(nil)";
+	printf("%s", uwu);
 }
 
 /**

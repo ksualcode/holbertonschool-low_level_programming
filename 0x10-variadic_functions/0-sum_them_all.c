@@ -2,13 +2,12 @@
 
 /**
  * sum_them_all - Adds all the parameters given
- * @argc: amount of arguments passed
- * @argv: argmuents passed
+ * @n: number of parameters you have
  *
  * Return: 0 if succesfull
  */
 
- int sum_them_all(const unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
 	int num = 0;

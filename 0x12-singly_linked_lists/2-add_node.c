@@ -1,24 +1,23 @@
 #include "lists.h"
 
-/*
+/**
 * _strlen - counts the ammount of characters of a string
 * @str: string to count
 *
 * Return: The ammount of characters
-*
-*
-*
-*unsigned int _strlen(char * str)
-*{
-*	unsigned int i = 0;
-*
-*	for (i = 0; str[i]; i++)
-*	{
-*	}
-*
-*	return (i);
-*}
 */
+
+unsigned int _strlen(char * str)
+{
+	unsigned int i = 0;
+
+	for (i = 0; str[i]; i++)
+	{
+	}
+
+	return (i);
+}
+
 
 /**
 * add_node - adds a node to the beginning of a list
@@ -47,7 +46,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	temp->len = strlen(str);
+	temp->len = _strlen((char *)str);
 	temp->next = *head;
 
 	*head = temp;

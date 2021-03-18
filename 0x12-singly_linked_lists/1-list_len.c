@@ -9,5 +9,15 @@
 
 size_t list_len(const list_t *h)
 {
+	int i;
+	list_t *search = (list_t *)h;
 
+	if (!h)
+		return (0);
+
+	for (i = 0; search; i++)
+	{
+		search = search->next;
+	}
+	return (i);
 }

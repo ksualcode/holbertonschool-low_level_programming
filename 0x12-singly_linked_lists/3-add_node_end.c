@@ -30,10 +30,10 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
 	list_t *search = *head;
-
-	if (!head)
-		return (NULL);
-
+/*
+*	if (!head)
+*		return (NULL);
+*/
 	temp = malloc(sizeof(list_t));
 	if (!temp)
 		return (NULL);
@@ -60,4 +60,5 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	return (temp);
+
 }

@@ -10,12 +10,14 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *search = *head;
-	int i;
+	listint_t *search = head;
+	unsigned int i;
 
 	for (i = 0; i < index; i++)
 	{
 		if (!search)
-
+			return (NULL);
+		search = search->next;
 	}
+	return (search);
 }

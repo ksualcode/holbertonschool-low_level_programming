@@ -18,7 +18,7 @@ size_t print_listint(const listint_t *h)
 	for (i = 0; search; i++)
 	{
 		if (!search->n)
-			printf("(nil)\n");
+			printf("0\n");
 		else
 			printf("%i\n", search->n);
 		search = search->next;

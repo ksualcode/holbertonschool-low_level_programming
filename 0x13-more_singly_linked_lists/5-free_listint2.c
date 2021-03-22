@@ -6,12 +6,12 @@
 *
 */
 
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
-	listint_t *buscador = head;
+	listint_t *buscador = *head;
 	listint_t *temp;
 
-	if (!head)
+	if (!*head)
 		return;
 
 	while (buscador)
@@ -20,5 +20,5 @@ void free_listint2(listint_t *head)
 		buscador = buscador->next;
 		free(temp);
 	}
-	head = NULL;
+	*head = NULL;
 }

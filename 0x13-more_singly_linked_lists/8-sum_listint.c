@@ -2,8 +2,9 @@
 
 /**
  * sum_listint - returns the sum of all the data (n) of a list
+ * @head: list to work with
  *
- *
+ * Return: the sum for all the data
  */
 
 int sum_listint(listint_t *head)

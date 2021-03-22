@@ -3,7 +3,7 @@
 /**
 * add_nodeint_end - adds a node to the beginning of a list
 * @head: list to base in
-* @str: string to copy
+* @n: number to assign
 *
 * Return: The direction of the new address
 */

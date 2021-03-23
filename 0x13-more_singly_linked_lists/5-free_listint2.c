@@ -13,9 +13,9 @@ void free_listint2(listint_t **head)
 
 	while (buscador)
 	{
-			temp = buscador;
-			buscador = buscador->next;
-			free(temp);
+		temp = buscador;
+		buscador = buscador->next;
+		free(temp);
 	}
 	*head = NULL;
 }

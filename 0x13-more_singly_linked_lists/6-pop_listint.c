@@ -9,15 +9,16 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *temp = (*head)->next;
+	listint_t *temp;
 	int n;
 
 	if (!*head)
 		return (0);
 
 	n = (*head)->n;
-	(*head)->next = *head;
+	temp = (*head)->next;
 
+	(*head)->next = *head;
 	free(*head);
 	*head = temp;
 

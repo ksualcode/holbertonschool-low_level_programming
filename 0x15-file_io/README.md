@@ -1,0 +1,3 @@
+# Learning all about C - File I/O
+## How to redirect to Input/output.
+### Creating files, reading them, etc...

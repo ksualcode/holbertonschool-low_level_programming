@@ -32,7 +32,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	node = *head;
 	for (i = 0; i < index; i++)
 	{
-		node = node->next;
+		if (node)
+			node = node->next;
+		else
+			return (-1);
 	}
 	if (!node->next)
 	{

@@ -1,5 +1,29 @@
 #include "lists.h"
 
+/**
+ * get_dnodeint_at_index - Gets a specific node of a list
+ * @head: List to iterate and get the node
+ * @index: The index node to retrieve
+ * ----------------------------------------
+ * Return: The address of the desired node
+ */
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+{
+	unsigned int i;
+	dlistint_t *node = head;
+
+	if (!head)
+		return (NULL);
+
+	for (i = 0; i < index; i++)
+	{
+		if (node)
+			node = node->next;
+		else
+			return (NULL);
+	}
+	return (node);
+}
 
 /**
  * delete_dnodeint_at_index - Deletes a specific node
@@ -11,7 +35,6 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *node, *fire;
-	unsigned int i;
 
 	if (!head || !*head)
 		return (-1);
@@ -29,14 +52,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(fire);
 		return (1);
 	}
-	node = *head;
-	for (i = 0; i < index; i++)
-	{
-		if (node)
-			node = node->next;
-		else
-			return (-1);
-	}
+	node = get_dnodeint_at_index(*head, index);
+	if (!node)
+		return (-1);
+
 	if (!node->next)
 	{
 		fire = node;

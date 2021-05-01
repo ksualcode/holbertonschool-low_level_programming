@@ -10,6 +10,7 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *node, *fire;
+	unsigned int i; 
 
 	if (!head || !*head)
 		return (-1);
@@ -29,9 +30,15 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	node = get_dnodeint_at_index(*head, index);
-	if (!node)
-		return (-1);
+	node = *head;
+
+	for (i = 0; i < index; i++)
+	{
+		if (node)
+			node = node->next;
+		else
+			return (-1);
+	}
 
 	if (!node->next)
 	{

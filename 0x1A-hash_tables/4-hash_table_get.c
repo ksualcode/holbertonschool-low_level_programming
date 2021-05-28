@@ -13,8 +13,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned int index;
 	char *value = NULL;
 
-    if (!ht || !key)
-        return (NULL);
+	if (!ht || !key)
+		return (NULL);
 
 	index = key_index((const unsigned char *)(key), ht->size);
 	tmp = ht->array[index];

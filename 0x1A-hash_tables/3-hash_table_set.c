@@ -20,6 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	tmp->value = strdup(value);
 	if (!tmp->key || !tmp->value || !tmp)
 		return (0);
+
 	tmp->next = NULL;
 	index = key_index((const unsigned char *)(key), ht->size);
 	if (ht->array[index] == NULL)
